@@ -3,7 +3,7 @@
 profilePath="$HOME/.profile"
 
 if [ -x "$(command -v brew)" ]; then
-    echo "Installing required packages using Homebrew"
+    echo "Installing required packages using Homebrew..."
 
     brew install openssl libsodium opus
 
