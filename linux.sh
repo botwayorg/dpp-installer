@@ -1,8 +1,6 @@
 #!/bin/bash
 
-latestDPPVersion=$(curl --silent "https://get-latest.herokuapp.com/brainboxdotcc/DPP")
-
-git clone https://github.com/brainboxdotcc/DPP dpp-lib -b $latestDPPVersion
+git clone https://github.com/brainboxdotcc/DPP dpp-lib
 
 cd dpp-lib
 
