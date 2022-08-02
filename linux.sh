@@ -36,3 +36,5 @@ cmake -B ./build
 cmake --build ./build -j8
 
 cd build; sudo make install
+
+cd ..; rm -rf dpp-lib

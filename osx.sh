@@ -22,6 +22,8 @@ if [ -x "$(command -v brew)" ]; then
     cmake --build ./build -j8
 
     cd build; sudo make install
+
+    cd ..; rm -rf dpp-lib
 else
     echo "Homebrew not found. Would you like to install it? (Y/n)"
     read -n 1 accept
