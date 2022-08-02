@@ -14,15 +14,15 @@ for f in ${!osInfo[@]}
 do
     if [[ -f $f ]];then
         if [ "${osInfo[$f]}" == "yum" ]; then
-            sudo yum update && sudo yum install -y opus libsodium
+            sudo yum update && sudo yum install -y opus libsodium opus-tools
         elif [ "${osInfo[$f]}" == "pacman" ]; then
-            sudo pacman -Syu && sudo pacman -S opus libsodium
+            sudo pacman -Syu && sudo pacman -S opus libsodium opus-tools
         elif [ "${osInfo[$f]}" == "emerge" ]; then
-            sudo emerge --update --deep --with-bdeps=y @world && sudo emerge -pv opus libsodium
+            sudo emerge --update --deep --with-bdeps=y @world && sudo emerge -pv opus libsodium opus-tools
         elif [ "${osInfo[$f]}" == "apt-get" ]; then
-            sudo apt-get upgrade -y && sudo apt-get install -y libsodium-dev libopus-dev
+            sudo apt-get upgrade -y && sudo apt-get install -y libsodium-dev libopus-dev opus-tools
         elif [ "${osInfo[$f]}" == "apk" ]; then
-            sudo apk update && sudo apk add libsodium opus
+            sudo apk update && sudo apk add libsodium opus opus-tools
         fi
     fi
 done
